@@ -1023,6 +1023,9 @@ $circle-radius: 180px;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
@@ -1281,7 +1284,6 @@ $circle-radius: 180px;
     top: 20px;
     right: 30px;
     cursor: pointer;
-    display: none;
 }
 .modal-window.hidden {
     display: none;
@@ -1291,6 +1293,12 @@ $circle-radius: 180px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+.section-header {
+    .h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 @import "about-section";
 @import "slider-section";

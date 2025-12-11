@@ -1811,6 +1811,9 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .benefits__card ul {
@@ -2110,7 +2113,6 @@ img {
   top: 20px;
   right: 30px;
   cursor: pointer;
-  display: none;
 }
 
 .modal-window.hidden {
@@ -2120,6 +2122,11 @@ img {
 .form-section {
   width: 873px;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header .h2 {
   margin-left: auto;
   margin-right: auto;
 }
@@ -2525,6 +2532,9 @@ img {
   .info-card {
     margin-bottom: 3.5%;
   }
+  .plans__item--popular {
+    width: 36%;
+  }
 }
 @media only screen and (max-width: 1200px) {
   /**/
@@ -2534,6 +2544,28 @@ img {
   }
   .contact-list {
     margin-left: 0;
+  }
+  .steps-section .card {
+    min-width: 260px;
+  }
+  .plans__item {
+    width: 30%;
+  }
+  .plans__item--popular {
+    width: 34%;
+  }
+  .plans__item--blue .plan__value {
+    font-size: 28px;
+  }
+  .plans__item .buttons-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+  .plans__item .buttons-wrapper .button {
+    width: 100%;
   }
 }
 /* Medium Devices, Desktops */
@@ -2909,6 +2941,43 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
+  .problem-solution .benefits__card-wrapper {
+    padding: 30px 20px;
+  }
+  .info-cards-row {
+    margin-top: 40px;
+  }
+  .plans__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .plans__item--popular {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .plans__item--orange {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .plans__item--blue {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .plans-description--3 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .statistic--2 .statistic-item {
+    width: 100%;
+  }
+  .statistic--2 .col-lg-3 {
+    margin-bottom: 25px;
+  }
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -3213,6 +3282,40 @@ img {
   }
   .nubos-logo {
     width: 56px;
+  }
+  .logos-section {
+    padding-top: 0;
+  }
+  .problem-solution .benefits__card-wrapper {
+    padding: 30px 20px !important;
+  }
+  .problem-solution .benefits__card-wrapper {
+    padding: 30px 15px;
+  }
+  .benefits__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .problem-solution .benefits__card {
+    width: 100%;
+    max-width: 100%;
+  }
+  .devider img {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .problem-solution {
+    padding-top: 0;
+  }
+  .whats-included-list {
+    margin-top: 0;
+    padding-left: 20px;
+  }
+  .features .section-header {
+    margin-bottom: 40px;
   }
 }
 /* Extra Small Devices, Phones */

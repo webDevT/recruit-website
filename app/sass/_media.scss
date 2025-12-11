@@ -23,6 +23,9 @@
 	.info-card {
 		margin-bottom: 3.5%;
 	}
+	.plans__item--popular {
+		width: 36%;
+	}
 	
     
 }
@@ -36,7 +39,26 @@
 	.contact-list {
 		margin-left: 0;
 	}
+	.steps-section .card  {
+		min-width: 260px;
+	}
 	
+	.plans__item {
+		width: 30%;
+	}
+	.plans__item--popular {
+		width: 34%;
+	}
+	.plans__item--blue .plan__value {
+		font-size: 28px;
+	}
+	.plans__item .buttons-wrapper {
+		flex-direction: column;
+		gap: 0;
+		.button {
+			width: 100%;
+		}
+	}
     
 }
 
@@ -344,6 +366,40 @@
 			margin-right: auto;
 		}
 	}
+	.problem-solution {
+		.benefits__card-wrapper {
+			padding: 30px 20px;
+		}
+	}
+	.info-cards-row {
+		margin-top: 40px;
+	}
+	.plans__list {
+		flex-direction: column;
+	}
+	.plans__item--popular {
+		order: 1;
+	}
+	.plans__item--orange {
+		order: 2;
+	}
+	.plans__item--blue {
+		order: 3;
+	}
+	.plans-description--3 {
+		margin-top: 15px;
+		margin-bottom: 30px;
+	}
+	.statistic--2 {
+		.statistic-item {
+			width: 100%;
+			
+		}
+		.col-lg-3 {
+			margin-bottom: 25px;
+		}
+	}
+	
 	
 }
 
@@ -575,7 +631,41 @@
 		width: 56px;
 	}
 	//end logo-animation mobile
-	
+	.logos-section {
+		padding-top: 0;
+	}
+	.problem-solution {
+		.benefits__card-wrapper {
+			padding: 30px 20px !important;
+		}
+	}
+	.problem-solution {
+		.benefits__card-wrapper {
+			padding: 30px 15px;
+		}
+	}
+	.benefits__row {
+		flex-direction: column;
+	}
+	.problem-solution .benefits__card {
+		width: 100%;
+		max-width: 100%;
+	}
+	.devider img {
+		transform: rotate(180deg);
+	}
+	.problem-solution {
+		padding-top: 0;
+	}
+	.whats-included-list {
+		margin-top: 0;
+		padding-left: 20px;
+	}
+	.features {
+		.section-header {
+			margin-bottom: 40px;
+		}
+	}
 
 	
 
