@@ -1016,16 +1016,30 @@ $circle-radius: 180px;
 }
 .logos-row {
     margin-top: 40px;
-    .col-lg-3 {
+    .logos-swiper {
+        overflow: hidden;
+    }
+    .swiper-wrapper {
+        display: flex;
+        align-items: stretch;
+    }
+    .swiper-slide {
         display: flex;
         align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+    .logo-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 120px;
         img {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
             max-width: 90%;
-            margin-left: auto;
-            margin-right: auto;
+            height: auto;
+            object-fit: contain;
         }
     }
 }

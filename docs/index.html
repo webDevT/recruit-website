@@ -22,6 +22,7 @@
 	
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 </head>
 <body>
@@ -107,20 +108,42 @@
 				
 			</div>
 
-			<div class="logos-row">
+		<div class="logos-row">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 col-sm-6 col-6">
-						<img src="img/i1.svg" alt="logo" class="logo-image">
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 col-6">
-						<img src="img/i2.svg" alt="logo" class="logo-image">
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 col-6">
-						<img src="img/i3.svg" alt="logo" class="logo-image">
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 col-6">
-						<img src="img/i5.svg" alt="logo" class="logo-image">
+				<div class="swiper logos-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="logo-wrapper">
+								<img src="img/i1.svg" alt="logo" class="logo-image">
+							</div>
+							
+						</div>
+						<div class="swiper-slide">
+							<div class="logo-wrapper">
+								<img src="img/i2.svg" alt="logo" class="logo-image">
+							</div>
+							
+						</div>
+						<div class="swiper-slide">
+							<div class="logo-wrapper">
+								<img src="img/i3.svg" alt="logo" class="logo-image">
+							</div>
+							
+						</div>
+						<div class="swiper-slide">
+							<div class="logo-wrapper">
+								<img src="img/i4.svg" alt="logo" class="logo-image">
+							</div>
+							
+						</div>
+						<div class="swiper-slide">
+							<div class="logo-wrapper">
+								<img src="img/i5.svg" alt="logo" class="logo-image">
+							</div>
+							
+						</div>
+						
+						
 					</div>
 				</div>
 			</div>
@@ -1358,16 +1381,20 @@
 	
 	
 	<script src="js/libs.min.js"></script>
-	<!-- Swiper fallback через CDN, якщо не завантажився з libs -->
 	<script>
-		if (typeof Swiper === 'undefined') {
-			var script = document.createElement('script');
-			script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
-			script.onload = function() {
-				console.log('Swiper loaded from CDN');
-			};
-			document.head.appendChild(script);
-		}
+		(function() {
+			if (typeof Swiper === 'undefined') {
+				var script = document.createElement('script');
+				script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+				script.onload = function() {
+					console.log('Swiper loaded from CDN');
+					if (typeof window.initLogosSwiper === 'function') {
+						window.initLogosSwiper();
+					}
+				};
+				document.head.appendChild(script);
+			}
+		})();
 	</script>
 	<script src="js/main.js"></script>
 </body>

@@ -1799,21 +1799,48 @@ img {
 .logos-row {
   margin-top: 40px;
 }
-.logos-row .col-lg-3 {
+.logos-row .logos-swiper {
+  overflow: hidden;
+}
+.logos-row .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.logos-row .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
 }
-.logos-row .col-lg-3 img {
+.logos-row .logo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 120px;
+}
+.logos-row .logo-wrapper img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .benefits__card ul {
@@ -3316,6 +3343,19 @@ img {
   }
   .features .section-header {
     margin-bottom: 40px;
+  }
+  .whats-included-row {
+    margin-top: 50px;
+  }
+  .cta .whats-included-list {
+    width: 300px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer__bottom {
+    text-align: center;
+    padding-top: 10px;
   }
 }
 /* Extra Small Devices, Phones */

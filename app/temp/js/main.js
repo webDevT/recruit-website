@@ -123,6 +123,71 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initSwiperSlider();
 
+    // Logos Swiper initialization
+    function initLogosSwiper() {
+        const logosSwiper = document.querySelector('.logos-swiper');
+
+        if (!logosSwiper) {
+            return;
+        }
+
+        if (logosSwiper.swiper) {
+            return;
+        }
+        if (typeof Swiper === 'undefined') {
+            setTimeout(initLogosSwiper, 100);
+            return;
+        }
+
+        try {
+            const swiperInstance = new Swiper(logosSwiper, {
+                loop: true,
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                autoplay: {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
+                },
+                speed: 500,
+                allowTouchMove: true,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    992: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    }
+                }
+            });
+
+            if (swiperInstance.autoplay && swiperInstance.autoplay.running) {
+                console.log('Logos Swiper autoplay initialized and running');
+            } else if (swiperInstance.autoplay) {
+                swiperInstance.autoplay.start();
+                console.log('Logos Swiper autoplay started manually');
+            } else {
+                console.warn('Logos Swiper autoplay not available');
+            }
+        } catch (error) {
+            console.error('Error initializing Logos Swiper:', error);
+        }
+    }
+
+    window.initLogosSwiper = initLogosSwiper;
+
+    initLogosSwiper();
+    
+    window.addEventListener('load', function() {
+        setTimeout(initLogosSwiper, 200);
+    });
+
     // Modal window functionality
     const modalWindow = document.querySelector('.modal-window');
     const closeModalBtn = document.querySelector('.close-modal-window');
@@ -160,7 +225,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close modal on click outside form-section
     if (modalWindow) {
         modalWindow.addEventListener('click', function(e) {
-            // Перевіряємо, чи клік був саме на фон (не на form-section та не на close button)
             const clickedOnCloseBtn = closeModalBtn && (e.target === closeModalBtn || closeModalBtn.contains(e.target));
             const clickedOnFormSection = formSection && formSection.contains(e.target);
             
